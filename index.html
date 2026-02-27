@@ -1,60 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana Bandito Mobile</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Member IQ – Run your classes like a pro</title>
+    <meta
+      name="description"
+      content="Elite Member IQ helps small gyms, bootcamps, and personal trainers keep members in the loop with schedules, announcements, and reminders in one modern app."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="brand">
+          <span class="brand-mark">
+            <img src="/img/logo-1024.png" alt="Elite Member IQ logo" />
+          </span>
+          <span class="brand-name">Elite Member IQ</span>
+        </div>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a
+              id="app-store-link"
+              href="#"
+              class="btn btn--ghost store-link store-link--appstore"
+            >
+              App Store (coming soon)
+            </a>
+            <a
+              id="google-play-link"
+              href="#"
+              class="btn btn--primary store-link store-link--play"
+            >
+              Google Play (coming soon)
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="section hero">
+        <div class="container hero-container">
+          <div class="hero-copy">
+            <p class="eyebrow">For small gyms & trainers</p>
+            <h1>Run your classes like a pro, not a spreadsheet.</h1>
+            <p class="hero-subtitle">
+              Elite Member IQ keeps your members, schedules, and announcements
+              in one place so your people always know what’s next.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="#"
+                class="btn btn--primary"
+                aria-describedby="store-links-note"
+              >
+                Get the app
+              </a>
+              <a href="/privacy" class="btn btn--ghost">
+                Learn how we handle your data
+              </a>
+            </div>
+            <p id="store-links-note" class="helper-text">
+              App Store and Google Play links will appear here as soon as the
+              app is live.
+            </p>
+            <ul class="hero-audience">
+              <li>Martial arts gyms & dojos</li>
+              <li>Bootcamps & group training</li>
+              <li>Personal trainers & small studios</li>
+            </ul>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="device-frame">
+              <div class="device-header"></div>
+              <div class="device-screen device-screen--placeholder">
+                <p>App preview coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section section--alt">
+        <div class="container">
+          <h2>Built for busy coaches and owners</h2>
+          <p class="section-intro">
+            Everything you need to keep your members in the loop, without
+            adding another spreadsheet to your life.
+          </p>
+          <div class="grid grid--features">
+            <article class="card feature-card">
+              <h3>Keep every member in the loop</h3>
+              <p>
+                Post announcements, schedule changes, and last-minute updates to
+                a central bulletin board so students never miss important info.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>Schedules that stick</h3>
+              <p>
+                Publish classes, bootcamps, and private sessions in one shared
+                schedule and let Elite Member IQ handle reminders so clients
+                show up on time.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>Easy member onboarding & roles</h3>
+              <p>
+                Invite members with simple join codes, approve them in a tap,
+                and give coaches the right permissions without IT headaches.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>See who’s engaged</h3>
+              <p>
+                View a running history of member activity so you and your
+                coaches know who’s active, who’s dropping off, and who needs a
+                nudge.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>Ready to grow with you</h3>
+              <p>
+                Start with a single coach or gym, then add more coaches,
+                locations, or programs as your community grows.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <h2>How Elite Member IQ fits into your day</h2>
+          <ol class="steps">
+            <li class="step">
+              <h3>1. Create your gym or community</h3>
+              <p>
+                Sign up as an owner, name your gym or program, and set up your
+                community in a few quick steps.
+              </p>
+            </li>
+            <li class="step">
+              <h3>2. Invite your members</h3>
+              <p>
+                Share a join code so students and clients can connect to your
+                community in the app.
+              </p>
+            </li>
+            <li class="step">
+              <h3>3. Share updates & schedules</h3>
+              <p>
+                Post announcements and publish your class, camp, and session
+                schedules so everyone sees what’s coming.
+              </p>
+            </li>
+            <li class="step">
+              <h3>4. Keep everyone aligned</h3>
+              <p>
+                Members get reminders and can review their own activity history,
+                while owners and coaches see who’s engaged.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="screenshots" class="section section--alt">
+        <div class="container">
+          <h2>See it in action</h2>
+          <p class="section-intro">
+            These are placeholders for real screenshots from the Elite Member
+            IQ app. Replace them once your production builds are ready.
+          </p>
+          <div class="grid grid--screenshots">
+            <figure class="card screenshot-card">
+              <div class="screenshot-placeholder"></div>
+              <figcaption>Home dashboard</figcaption>
+            </figure>
+            <figure class="card screenshot-card">
+              <div class="screenshot-placeholder"></div>
+              <figcaption>Bulletin board</figcaption>
+            </figure>
+            <figure class="card screenshot-card">
+              <div class="screenshot-placeholder"></div>
+              <figcaption>Schedule & upcoming classes</figcaption>
+            </figure>
+            <figure class="card screenshot-card">
+              <div class="screenshot-placeholder"></div>
+              <figcaption>Member profile & activity history</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy-glance" class="section">
+        <div class="container">
+          <h2>Privacy at a glance</h2>
+          <p class="section-intro">
+            Elite Member IQ is built for trust. We keep your community’s data
+            secure and avoid collecting anything we don’t need to run the app.
+          </p>
+          <div class="grid grid--privacy">
+            <article class="card privacy-card">
+              <h3>Firebase-backed</h3>
+              <p>
+                We use Firebase services to authenticate users and store
+                community data securely in the cloud.
+              </p>
+            </article>
+            <article class="card privacy-card">
+              <h3>No data sales</h3>
+              <p>
+                We do not sell your personal information. Data is only used to
+                provide and improve the Elite Member IQ app.
+              </p>
+            </article>
+            <article class="card privacy-card">
+              <h3>Control from the app</h3>
+              <p>
+                You can manage your account and request changes to your data
+                through the app, with a typical response time of 24 hours.
+              </p>
+            </article>
+          </div>
+          <a href="/privacy" class="btn btn--outline">
+            Read the full Privacy Policy
+          </a>
+        </div>
+      </section>
+
+      <section class="section section--cta">
+        <div class="container cta-container">
+          <div>
+            <h2>Ready to keep your members in the loop?</h2>
+            <p>
+              Elite Member IQ helps small gyms and trainers run smooth,
+              professional communities without extra admin.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn btn--primary">Get the app</a>
+            <p class="helper-text">
+              App Store and Google Play links will appear here when the app is
+              live.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <img src="/img/logo-1024.png" alt="Elite Member IQ logo" />
+          </span>
+          <span class="brand-name">Elite Member IQ</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </nav>
+        <div class="footer-cta-group">
+          <a href="#" class="btn btn--ghost store-link store-link--appstore">
+            App Store (coming soon)
+          </a>
+          <a href="#" class="btn btn--primary store-link store-link--play">
+            Google Play (coming soon)
+          </a>
+        </div>
+        <p class="footer-meta">
+          &copy; <span id="year"></span> Banana Bandito LLC. All rights
+          reserved.
+        </p>
+        <p class="footer-meta">
+          For support, open the Elite Member IQ app and use the in-app
+          help/support section.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const navToggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".site-nav");
+        const yearEl = document.getElementById("year");
+
+        if (navToggle && nav) {
+          navToggle.addEventListener("click", () => {
+            const expanded =
+              navToggle.getAttribute("aria-expanded") === "true";
+            navToggle.setAttribute("aria-expanded", String(!expanded));
+            nav.classList.toggle("site-nav--open", !expanded);
+          });
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
+
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear().toString();
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .privacy-link {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-        }
-        .privacy-link:hover {
-            background: #2980b9;
-        }
-        .description {
-            color: #7f8c8d;
-            font-size: 16px;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Banana Bandito Mobile</h1>
-        <p class="description">Mobile applications by Banana Bandito LLC</p>
-        
-        <a href="/privacy" class="privacy-link">Privacy Policy</a>
-        
-        <p>For privacy inquiries, please contact us at: <strong>privacy@bananabandito.com</strong></p>
-    </div>
-</body>
+      })();
+    </script>
+  </body>
 </html>
