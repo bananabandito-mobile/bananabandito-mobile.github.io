@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; form-action 'none'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elite Member IQ – Privacy Policy</title>
     <meta
       name="description"
-      content="Privacy Policy for Elite Member IQ, a Firebase-backed app for managing members, schedules, and announcements for small gyms and trainers."
+      content="Privacy Policy for Elite Member IQ, a Firebase-backed app for members, schedules, messaging, documents, and Stripe billing for small gyms and trainers."
     />
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/img/logo-1024.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -60,15 +67,15 @@
             <h1>Elite Member IQ Privacy Policy</h1>
             <p class="privacy-meta">
               Last updated:
-              <time datetime="2026-02-27">February 27, 2026</time>
+              <time datetime="2026-08-16">August 16, 2026</time>
               · This policy describes how Elite Member IQ handles personal data
               for users of the app and this website.
             </p>
             <p class="section-intro">
-              Elite Member IQ is built for small gyms, bootcamps, and personal
-              trainers. We use Firebase and platform providers like Apple and
-              Google to run the app, and we focus on collecting only the data we
-              need to provide the service.
+              Elite Member IQ is a mobile hub for small gyms, dojos, bootcamps,
+              and trainers. We use Firebase, Stripe (when billing is enabled),
+              and platform providers like Apple and Google to run the app, and
+              we collect only the data we need to provide the service.
             </p>
           </header>
 
@@ -82,7 +89,7 @@
               <li><a href="#cookies">5. Cookies and similar technologies</a></li>
               <li><a href="#retention">6. Data retention</a></li>
               <li><a href="#your-rights">7. Your rights and choices</a></li>
-              <li><a href="#children">8. Children’s privacy</a></li>
+              <li><a href="#children">8. Children and dependents</a></li>
               <li><a href="#security">9. Security</a></li>
               <li><a href="#transfers">10. International data transfers</a></li>
               <li><a href="#changes">11. Changes to this policy</a></li>
@@ -104,6 +111,14 @@
               additional states and countries over time. When we expand into new
               regions or add new tools, we will update this policy as needed.
             </p>
+            <p>
+              Elite Member IQ includes community membership, announcements,
+              scheduling with RSVPs, staff messaging (Chat), documents and
+              e-sign, and optional Stripe-powered billing (platform fees, member
+              subscriptions, and Connect payouts) when a community enables it.
+              Community owners, managers, instructors, and staff may see member
+              data within their community as needed to operate the gym.
+            </p>
           </section>
 
           <section id="data-we-collect" class="privacy-section">
@@ -116,33 +131,93 @@
             <h3>Account and profile information</h3>
             <ul>
               <li>
-                <strong>Account details:</strong> your name, email address, and
-                password (stored as a hashed value, not in plain text).
+                <strong>Account details:</strong> your name and email address.
+                Accounts use email and password only. Firebase Authentication
+                stores that password as a hashed credential — not in plain text
+                in our database. We do not offer Sign in with Apple, Google, or
+                other social login providers.
+              </li>
+              <li>
+                <strong>Profile (optional):</strong> display name and phone
+                number if you choose to provide them. We do not collect date of
+                birth.
               </li>
               <li>
                 <strong>Role and membership:</strong> whether you are an owner,
-                coach, staff, or member, and which gym/community you belong to.
+                manager, instructor, staff member, billing admin, member, or
+                dependent; which community you belong to; membership status;
+                permission flags; and join-code onboarding.
               </li>
               <li>
-                <strong>Optional information:</strong> for example, a member’s
-                date of birth if you choose to provide it.
+                <strong>Notification registration:</strong> a Firebase Cloud
+                Messaging (FCM) token used to deliver push notifications to your
+                device.
+              </li>
+            </ul>
+
+            <h3>Dependents and household</h3>
+            <ul>
+              <li>
+                <strong>Dependent profiles:</strong> display name and plan or
+                billing linkage for household members who do not have their own
+                login (including children under 13). We do not collect date of
+                birth, and we do not give under-13 dependents a login, chat
+                access, or a push-notification token.
+              </li>
+              <li>
+                <strong>Guardian relationship:</strong> the primary member
+                linked to a dependent profile. Staff and the household primary
+                see that profile in the community as needed to run the gym.
               </li>
             </ul>
 
             <h3>Community and content data</h3>
             <ul>
               <li>
-                <strong>Community details:</strong> gym or community name, logo,
-                and basic settings.
+                <strong>Community details:</strong> gym or community name,
+                address, phone, logo or branding, join code, and basic settings.
               </li>
               <li>
-                <strong>Bulletin posts:</strong> announcements, messages, and
-                any images you upload to share with your members.
+                <strong>Bulletin and announcements:</strong> posts, messages,
+                and images you upload to share with your members.
               </li>
               <li>
-                <strong>Schedule and events:</strong> classes, bootcamps,
-                practices, and other events you create, including dates and
-                times.
+                <strong>Schedule and events:</strong> classes, camps, sessions,
+                dates and times, RSVP status, session assignments, instructor
+                assignment, and occurrence exceptions (for example canceling or
+                rescheduling a single class).
+              </li>
+              <li>
+                <strong>Messaging:</strong> conversation metadata; message text;
+                images uploaded to staff inbox, announcements, community
+                channels, or class/cohort chats; and moderation records (reports,
+                hide or delete actions, internal staff-only notes).
+              </li>
+              <li>
+                <strong>Documents:</strong> uploaded PDFs, titles and
+                descriptions, assignments, and e-sign records (consent text,
+                typed signer name, signed PDF copy, and signing timestamp).
+              </li>
+            </ul>
+
+            <h3>Billing and payment data</h3>
+            <ul>
+              <li>
+                <strong>Billing configuration:</strong> membership plans,
+                pricing rules, and household, trial, or registration-fee policy.
+              </li>
+              <li>
+                <strong>Payment identifiers and status:</strong> Stripe
+                customer, subscription, and Connect account IDs; payment status;
+                billing type; and invoice or snapshot references. Full card or
+                bank numbers are entered in Stripe-hosted flows and are not
+                stored in our database.
+              </li>
+              <li>
+                <strong>Platform and member billing:</strong> community default
+                payment method confirmation via Stripe, member subscriptions,
+                household plan assignments, and member-chosen amounts where
+                enabled.
               </li>
             </ul>
 
@@ -150,12 +225,14 @@
             <ul>
               <li>
                 <strong>Activity history:</strong> records of certain in-app
-                events (such as notifications sent or actions taken) so that you
-                and your members can see a history of activity.
+                events (such as announcements, chat, documents signed,
+                assigned sessions, and billing alerts) so that you and your members
+                can see a history of activity.
               </li>
               <li>
-                <strong>App interactions:</strong> basic information about how
-                features are used, to help keep the app working reliably.
+                <strong>Owner analytics:</strong> aggregated counts computed in
+                the app from community data (for example member counts, join
+                requests, and RSVP totals). This is not advertising analytics.
               </li>
             </ul>
 
@@ -166,13 +243,20 @@
                 operating system version, and app version.
               </li>
               <li>
-                <strong>Technical logs:</strong> limited diagnostic and error
-                information that helps us troubleshoot issues.
+                <strong>Crash and error reports:</strong> Firebase Crashlytics
+                crash and non-fatal reports (stack traces and crash metadata).
+                We do not set payment or contact identifiers as Crashlytics
+                custom keys.
               </li>
               <li>
-                <strong>Notification tokens:</strong> identifiers used by
-                Firebase Cloud Messaging (FCM) to deliver push notifications to
-                your device.
+                <strong>App Check signals:</strong> device and app attestation
+                tokens (for example Play Integrity or App Attest) used to verify
+                genuine app traffic.
+              </li>
+              <li>
+                <strong>Technical logs:</strong> limited diagnostic and error
+                information, including server-side logs for billing webhooks. We
+                do not log full card data.
               </li>
             </ul>
           </section>
@@ -184,27 +268,46 @@
             <ul>
               <li>To create and manage user accounts and communities.</li>
               <li>
-                To display bulletin posts, schedules, and activity history to
-                the right people.
+                To display announcements, schedules, activity history, documents,
+                and conversations to the right people.
               </li>
               <li>
-                To send in-app and push notifications about upcoming events and
-                important updates.
+                To send in-app and push notifications for key updates (for
+                example join requests, announcements, chat, and assigned
+                sessions).
+              </li>
+              <li>
+                To assign, display, and e-sign PDF documents, and to store
+                signed copies.
+              </li>
+              <li>
+                To collect platform fees, member subscriptions, and Connect
+                payouts when billing is enabled, including household pricing and
+                payment-failure alerts.
+              </li>
+              <li>
+                To support guardian-managed dependent profiles (no login or chat
+                for children under 13) and member accounts for users 13 and
+                older.
               </li>
             </ul>
 
             <h3>To maintain safety and reliability</h3>
             <ul>
               <li>To monitor for abuse, misuse, or technical issues.</li>
-              <li>To protect the security and integrity of the Services.</li>
+              <li>
+                To protect the security and integrity of the Services, including
+                Firebase App Check on client and backend calls.
+              </li>
+              <li>To diagnose crashes with Firebase Crashlytics.</li>
               <li>To enforce our terms and comply with applicable law.</li>
             </ul>
 
             <h3>To communicate with you</h3>
             <ul>
               <li>
-                To respond to support requests you submit through the app’s
-                support or help section.
+                To respond to privacy, deletion, or account requests you send to
+                Banana Bandito LLC using the contact details in Section 12.
               </li>
               <li>
                 To send important notices about changes to the Services or this
@@ -225,7 +328,7 @@
               IQ, comply with the law, or with your direction.
             </p>
 
-            <h3>Service providers (including Firebase)</h3>
+            <h3>Service providers</h3>
             <p>
               We use trusted service providers to run the Services. These
               providers process data on our behalf and only as instructed by us.
@@ -233,17 +336,60 @@
             </p>
             <ul>
               <li>
-                <strong>Firebase (Google):</strong> for authentication, database
-                storage (Firestore), file storage (for images such as logos and
-                bulletin images), cloud functions, and push notifications
-                (Firebase Cloud Messaging).
+                <strong>Stripe:</strong> payment processing for community
+                platform billing, member subscriptions (including household
+                plans), and Stripe Connect payouts to communities. Stripe
+                receives payment method details directly; we store Stripe
+                identifiers, billing status, and invoice or subscription
+                references in Firebase — not full card or bank account numbers.
               </li>
               <li>
-                <strong>Apple and Google:</strong> as platform providers and app
-                stores, including for app distribution and in-app purchases (if
-                applicable).
+                <strong>Firebase (Google):</strong> authentication; Firestore
+                database; Cloud Storage (logos, bulletin images, chat images,
+                PDF documents and signed copies); Cloud Functions; Firebase
+                Cloud Messaging (push notifications); Firebase App Check (app
+                attestation); and Firebase Crashlytics (crash and error
+                reports).
+              </li>
+              <li>
+                <strong>Apple and Google:</strong> mobile platform providers and
+                (when published) app store distribution. We do not use Sign in
+                with Apple or Google Sign-In. Elite Member IQ does not use
+                Apple App Store or Google Play in-app purchase billing for gym
+                memberships; payments are processed through Stripe when billing
+                is enabled.
+              </li>
+              <li>
+                <strong>GitHub and Cloudflare:</strong> this marketing website is
+                hosted on GitHub Pages (including GitHub’s content delivery
+                network) and served through Cloudflare on our custom domain.
+                They process standard request metadata (such as IP address,
+                user-agent, and requested URL) to deliver the site over HTTPS.
+                See
+                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+                  >GitHub’s privacy statement</a
+                >
+                and
+                <a href="https://www.cloudflare.com/privacypolicy/"
+                  >Cloudflare’s privacy policy</a
+                >.
               </li>
             </ul>
+
+            <h3>Within your community</h3>
+            <p>
+              Community owners, managers, staff, and instructors (as permitted
+              by role) can view information needed to run the gym — for example
+              member profiles, RSVP and session assignment status, billing
+              status, chat threads they manage, and document assignments.
+              Members see content shared with them (announcements, schedule,
+              assigned documents, and conversations they participate in).
+            </p>
+            <p>
+              Messaging your gym through Chat routes messages to community
+              staff. That is not a direct line to Banana Bandito LLC unless we
+              operate that community.
+            </p>
 
             <h3>Legal and safety</h3>
             <ul>
@@ -267,24 +413,34 @@
 
             <p>
               We do <strong>not</strong> sell your personal information and we
-              do not currently use third-party advertising networks or
-              non-Firebase analytics SDKs in the app.
+              do not use third-party advertising networks. We use Firebase
+              Crashlytics (part of Firebase/Google) for crash reporting only,
+              without setting payment or contact identifiers as custom keys.
             </p>
           </section>
 
           <section id="cookies" class="privacy-section">
             <h2>5. Cookies and similar technologies</h2>
             <p>
-              This marketing website may use simple cookies or similar
-              technologies to keep basic settings (such as language preferences)
-              and to help ensure the site works correctly. We do not use cookies
-              here for targeted advertising.
+              This marketing website does not set cookies and does not use
+              browser storage such as localStorage or sessionStorage. We do not
+              use cookies or similar technologies on this website for
+              advertising or analytics.
+            </p>
+            <p>
+              Our hosting providers (GitHub Pages and Cloudflare) may process
+              standard web request data to serve the site, provide HTTPS, and
+              maintain security. Those providers may set their own cookies as
+              described in their privacy policies.
             </p>
             <p>
               The mobile app uses Firebase and platform SDKs that may store
               technical identifiers or tokens on your device to support sign-in,
-              data sync, and notifications. You can manage certain settings
-              (such as notifications) through your device’s system settings.
+              data sync, and notifications. The app also uses Firebase App
+              Check, which may exchange device attestation signals with Google
+              to confirm the app is genuine before allowing access to backend
+              services. You can manage certain settings (such as notifications)
+              through your device’s system settings.
             </p>
           </section>
 
@@ -300,8 +456,26 @@
                 community remain active.
               </li>
               <li>
-                Activity and technical logs may be kept for a shorter period to
-                help us troubleshoot issues and keep the Services secure.
+                Messages and chat images are retained while the conversation or
+                community exists and as needed for moderation.
+              </li>
+              <li>
+                Signed documents are retained for record-keeping until deleted
+                as part of community or account lifecycle.
+              </li>
+              <li>
+                Billing records (Stripe identifiers, snapshots, and payment
+                status) are retained while billing is active and as required for
+                tax or accounting.
+              </li>
+              <li>
+                Crash reports are retained per Firebase Crashlytics default
+                retention.
+              </li>
+              <li>
+                FCM tokens are removed on sign-out. Activity and technical logs
+                may be kept for a shorter period to help us troubleshoot issues
+                and keep the Services secure.
               </li>
             </ul>
             <p>
@@ -325,35 +499,66 @@
               </li>
               <li>
                 <strong>Account deletion:</strong> you can request deletion of
-                your account and associated data via the in-app support or help
-                section.
+                your account and associated data by emailing us using the
+                contact details in Section 12. We may ask you to verify that the
+                request comes from the account holder.
               </li>
               <li>
                 <strong>Notifications:</strong> you can manage push
                 notifications through your device and app settings.
               </li>
+              <li>
+                <strong>Billing:</strong> where Stripe flows are enabled, you
+                can manage payment methods and subscriptions in the app (member
+                self-service and owner billing screens).
+              </li>
+              <li>
+                <strong>Dependent controls:</strong> primary members manage
+                dependent profiles. Members aged 13–17 who have their own login
+                can update their own profile; gym staff and a linked adult in
+                the household can still see that member in the community.
+              </li>
+              <li>
+                <strong>Community exit:</strong> where available in the app,
+                you can leave a community from the app. Leaving a community is
+                not the same as deleting your Elite Member IQ account.
+              </li>
             </ul>
-            <div class="privacy-callout">
-              <p>
-                When you contact us through the app with a privacy or data
-                request, we aim to respond within
-                <strong>24 hours</strong> where reasonably possible.
-              </p>
-            </div>
           </section>
 
           <section id="children" class="privacy-section">
-            <h2>8. Children’s privacy</h2>
+            <h2>8. Children, dependents, and age-related information</h2>
             <p>
-              Elite Member IQ is designed for coaches, gym owners, trainers, and
-              their communities. It is not primarily directed at children.
+              Elite Member IQ is designed for gym owners, managers, staff,
+              instructors, and members. You must be at least 13 years old to
+              create an Elite Member IQ account. The app is not directed at
+              children under 13, and we do not create logins, chat access, or
+              push-notification tokens for children under 13.
             </p>
             <p>
-              We do not knowingly collect personal information directly from
-              children under 13 without appropriate consent. If we learn that we
-              have collected such information, we will take steps to delete it.
-              If you believe a child has provided us data without consent,
-              please reach out through the in-app support section.
+              A primary member may add <strong>dependents</strong> under 13
+              (for example family members or youth athletes) as household
+              profiles. Those profiles include a display name and billing
+              linkage provided by the adult member or gym staff. We do not
+              collect date of birth. Under-13 dependents cannot sign in or use
+              Chat.
+            </p>
+            <p>
+              Members aged 13–17 may have their own email-and-password account.
+              That account is supervised in the gym: community staff and a
+              linked adult in the household can see and manage that member’s
+              community record (for example roster, RSVPs, documents, and
+              billing) as they would for other members.
+            </p>
+            <p>
+              Communities may offer youth-oriented membership plans. Billing for
+              dependents and teens may be included in household subscriptions
+              managed by the primary member.
+            </p>
+            <p>
+              If you believe we have collected a child’s personal information
+              without appropriate guardian involvement, contact us using the
+              details in Section 12.
             </p>
           </section>
 
@@ -362,11 +567,23 @@
             <p>
               We use reasonable technical and organizational measures to protect
               your information, including the security features provided by
-              Firebase and our hosting providers.
+              Firebase, Stripe, GitHub Pages, and Cloudflare.
             </p>
             <ul>
               <li>Encryption in transit for data between the app and backend.</li>
               <li>Restricted access to production systems.</li>
+              <li>
+                Firebase App Check on the client and on HTTPS callables to help
+                verify genuine app traffic.
+              </li>
+              <li>
+                Stripe handles PCI-scoped payment data; we store Stripe
+                identifiers and billing status, not full card or bank numbers.
+              </li>
+              <li>
+                Chat and document storage paths are scoped by community and
+                authentication rules.
+              </li>
               <li>Monitoring for unusual or abusive activity.</li>
             </ul>
             <p>
@@ -379,8 +596,9 @@
             <h2>10. International data transfers</h2>
             <p>
               Even though we are currently focused on users in the United
-              States, some of our service providers (such as Firebase) may
-              process or store data in data centers located in other regions.
+              States, some of our service providers (such as Firebase/Google and
+              Stripe) may process or store data in data centers located in other
+              regions.
             </p>
             <p>
               Where data is transferred or stored outside your state or country,
@@ -413,12 +631,22 @@
             <h2>12. How to contact us</h2>
             <p>
               If you have questions about this Privacy Policy or how we handle
-              your information:
+              your information, or to request access, correction, or deletion:
             </p>
             <ul>
               <li>
-                Open the Elite Member IQ app and use the in-app
-                <strong>support/help</strong> section to contact us.
+                Email
+                <a href="mailto:elitememberiq-support@bananabandito.com"
+                  >elitememberiq-support@bananabandito.com</a
+                >
+                with your account email, community name, and request type
+                (access, correction, deletion, or other privacy question).
+              </li>
+              <li>
+                For billing or account issues within a community, you may also
+                use <strong>Chat</strong> in the app to message your gym. That
+                routes messages to community staff, not to Banana Bandito LLC,
+                unless we operate that community.
               </li>
             </ul>
             <p>
@@ -461,31 +689,14 @@
           reserved.
         </p>
         <p class="footer-meta">
-          For support, open the Elite Member IQ app and use the in-app
-          help/support section.
+          For privacy or account requests, email
+          <a href="mailto:elitememberiq-support@bananabandito.com"
+            >elitememberiq-support@bananabandito.com</a
+          >. To reach your gym, use Chat in the Elite Member IQ app.
         </p>
       </div>
     </footer>
 
-    <script>
-      (function () {
-        const navToggle = document.querySelector(".nav-toggle");
-        const nav = document.querySelector(".site-nav");
-        const yearEl = document.getElementById("year");
-
-        if (navToggle && nav) {
-          navToggle.addEventListener("click", () => {
-            const expanded =
-              navToggle.getAttribute("aria-expanded") === "true";
-            navToggle.setAttribute("aria-expanded", String(!expanded));
-            nav.classList.toggle("site-nav--open", !expanded);
-          });
-        }
-
-        if (yearEl) {
-          yearEl.textContent = new Date().getFullYear().toString();
-        }
-      })();
-    </script>
+    <script src="/js/site.js" defer></script>
   </body>
 </html>

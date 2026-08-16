@@ -285,7 +285,17 @@ h3 {
 
 .hero-visual {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.hero-visual-caption {
+  margin: 0;
+  max-width: 16rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }
 
 .device-frame {
@@ -322,6 +332,61 @@ h3 {
   margin: 0;
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.device-screen--preview {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0.7rem 0.65rem 0.55rem;
+  gap: 0.45rem;
+}
+
+.device-screen-label {
+  margin: 0;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.preview-appbar {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.75);
+  font-size: 0.72rem;
+}
+
+.preview-card-kicker {
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #67e8f9;
+}
+
+.preview-tabs {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+  font-size: 0.52rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.preview-tabs .is-active {
+  color: #e5e7eb;
 }
 
 /* Buttons */
@@ -421,6 +486,55 @@ h3 {
   margin-bottom: 0.75rem;
 }
 
+.screenshot-preview {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+    #0b1022;
+  height: 210px;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.screenshot-preview-chrome {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #e5e7eb;
+}
+
+.screenshot-preview-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.screenshot-preview-rows span {
+  display: block;
+  height: 28%;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.16);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.screenshot-preview--announcements .screenshot-preview-rows span:first-child,
+.screenshot-preview--billing .screenshot-preview-rows span:first-child {
+  background: rgba(56, 189, 248, 0.22);
+}
+
+.screenshot-preview--schedule .screenshot-preview-rows span:nth-child(2),
+.screenshot-preview--inbox .screenshot-preview-rows span:nth-child(2) {
+  background: rgba(168, 85, 247, 0.2);
+}
+
+.screenshot-preview--documents .screenshot-preview-rows span:last-child {
+  background: rgba(34, 193, 195, 0.2);
+}
+
 .screenshot-card figcaption {
   font-size: 0.85rem;
   color: var(--color-text-muted);
@@ -434,6 +548,7 @@ h3 {
   margin: 2rem 0 0;
   display: grid;
   gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .step {

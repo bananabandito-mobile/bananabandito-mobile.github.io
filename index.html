@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; form-action 'none'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elite Member IQ – Run your classes like a pro</title>
+    <title>Elite Member IQ | Members, classes, waivers &amp; billing</title>
     <meta
       name="description"
-      content="Elite Member IQ helps small gyms, bootcamps, and personal trainers keep members in the loop with schedules, announcements, and reminders in one modern app."
+      content="A mobile hub for gyms, dojos, bootcamps, and trainers. Members, announcements, class RSVPs, staff messaging, waivers, and membership billing in one app."
     />
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/img/logo-1024.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -62,11 +69,14 @@
       <section id="home" class="section hero">
         <div class="container hero-container">
           <div class="hero-copy">
-            <p class="eyebrow">For small gyms & trainers</p>
-            <h1>Run your classes like a pro, not a spreadsheet.</h1>
+            <p class="eyebrow">For small gyms, dojos, bootcamps, and trainers</p>
+            <h1>Members, classes, waivers, and billing in one mobile hub.</h1>
             <p class="hero-subtitle">
-              Elite Member IQ keeps your members, schedules, and announcements
-              in one place so your people always know what’s next.
+              Elite Member IQ is built for small gyms, martial arts dojos,
+              bootcamps, and personal trainers. Owners run one community. After
+              billing setup, share a join code; members request access and the
+              owner approves. Staff post updates, take RSVPs, collect e-signed
+              documents, and bill memberships from the same app.
             </p>
             <div class="hero-actions">
               <a
@@ -81,69 +91,108 @@
               </a>
             </div>
             <p id="store-links-note" class="helper-text">
-              App Store and Google Play links will appear here as soon as the
-              app is live.
+              App Store and Google Play links will appear here when the app is
+              live.
             </p>
             <ul class="hero-audience">
-              <li>Martial arts gyms & dojos</li>
-              <li>Bootcamps & group training</li>
-              <li>Personal trainers & small studios</li>
+              <li>Martial arts gyms &amp; dojos</li>
+              <li>Bootcamps &amp; group training</li>
+              <li>Personal trainers &amp; small studios</li>
             </ul>
           </div>
-          <div class="hero-visual" aria-hidden="true">
-            <div class="device-frame">
+          <div class="hero-visual">
+            <div class="device-frame" aria-hidden="true">
               <div class="device-header"></div>
-              <div class="device-screen device-screen--placeholder">
-                <p>App preview coming soon</p>
+              <div class="device-screen device-screen--preview">
+                <p class="device-screen-label">Owner home</p>
+                <div class="preview-appbar">Elite Member IQ</div>
+                <div class="preview-card">
+                  <span class="preview-card-kicker">Community</span>
+                  <span>Announcements</span>
+                </div>
+                <div class="preview-card">
+                  <span class="preview-card-kicker">Today</span>
+                  <span>Class schedule &amp; RSVPs</span>
+                </div>
+                <div class="preview-card">
+                  <span class="preview-card-kicker">Staff</span>
+                  <span>Inbox &amp; documents</span>
+                </div>
+                <div class="preview-tabs">
+                  <span class="is-active">Home</span>
+                  <span>Schedule</span>
+                  <span>Members</span>
+                  <span>Profile</span>
+                </div>
               </div>
             </div>
+            <p class="hero-visual-caption">
+              Stylized preview of the owner home. Production screenshots will
+              replace this when store builds are live.
+            </p>
           </div>
         </div>
       </section>
 
       <section id="features" class="section section--alt">
         <div class="container">
-          <h2>Built for busy coaches and owners</h2>
+          <h2>Built for gym owners, instructors, and staff</h2>
           <p class="section-intro">
-            Everything you need to keep your members in the loop, without
-            adding another spreadsheet to your life.
+            One app for the people already on your floor: members,
+            announcements, class RSVPs, staff messaging, waivers, and membership
+            billing.
           </p>
           <div class="grid grid--features">
             <article class="card feature-card">
-              <h3>Keep every member in the loop</h3>
+              <h3>Join with a code, approve in the app</h3>
               <p>
-                Post announcements, schedule changes, and last-minute updates to
-                a central bulletin board so students never miss important info.
+                After billing setup, share a join code. Members request access;
+                the owner approves who gets into the community.
               </p>
             </article>
             <article class="card feature-card">
-              <h3>Schedules that stick</h3>
+              <h3>Announcements that actually get seen</h3>
               <p>
-                Publish classes, bootcamps, and private sessions in one shared
-                schedule and let Elite Member IQ handle reminders so clients
-                show up on time.
+                Post updates to the community bulletin. Members see them in the
+                app, with push notifications when the floor needs to know now.
               </p>
             </article>
             <article class="card feature-card">
-              <h3>Easy member onboarding & roles</h3>
+              <h3>Schedule, RSVP, and assign instructors</h3>
               <p>
-                Invite members with simple join codes, approve them in a tap,
-                and give coaches the right permissions without IT headaches.
+                Publish classes and sessions, take RSVPs, target who should see
+                a session, and assign an instructor — without a separate
+                calendar tool.
               </p>
             </article>
             <article class="card feature-card">
-              <h3>See who’s engaged</h3>
+              <h3>Staff inbox and class channels</h3>
               <p>
-                View a running history of member activity so you and your
-                coaches know who’s active, who’s dropping off, and who needs a
-                nudge.
+                Members message the gym; staff work the inbox and class
+                channels. Messaging stays operational — members do not DM each
+                other.
               </p>
             </article>
             <article class="card feature-card">
-              <h3>Ready to grow with you</h3>
+              <h3>Waivers and documents, e-signed</h3>
               <p>
-                Start with a single coach or gym, then add more coaches,
-                locations, or programs as your community grows.
+                Send PDFs for members to review and e-sign in the app, so
+                waivers and policies live with the membership record.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>Membership plans, households, and payouts</h3>
+              <p>
+                Create membership plans, bill households, add dependents, and
+                receive payouts through Stripe Connect.
+              </p>
+            </article>
+            <article class="card feature-card">
+              <h3>Owner analytics</h3>
+              <p>
+                Review member counts, join requests, RSVP totals, and billing
+                snapshots in the app. Built for a single gym or studio — not an
+                enterprise dashboard.
               </p>
             </article>
           </div>
@@ -152,34 +201,42 @@
 
       <section id="how-it-works" class="section">
         <div class="container">
-          <h2>How Elite Member IQ fits into your day</h2>
+          <h2>How Elite Member IQ fits your week</h2>
           <ol class="steps">
             <li class="step">
-              <h3>1. Create your gym or community</h3>
+              <h3>1. Create your community</h3>
               <p>
-                Sign up as an owner, name your gym or program, and set up your
-                community in a few quick steps.
+                Sign up as Owner, name your gym or studio, and set staff roles
+                (Manager, Instructor, Staff, Billing Admin).
               </p>
             </li>
             <li class="step">
-              <h3>2. Invite your members</h3>
+              <h3>2. Connect billing before you invite anyone</h3>
               <p>
-                Share a join code so students and clients can connect to your
-                community in the app.
+                Connect Stripe Connect, add membership plans, and turn on
+                household billing so payouts and plans are ready before the
+                first join code goes out.
               </p>
             </li>
             <li class="step">
-              <h3>3. Share updates & schedules</h3>
+              <h3>3. Share a join code and approve members</h3>
               <p>
-                Post announcements and publish your class, camp, and session
-                schedules so everyone sees what’s coming.
+                Members enter your code and wait for approval. Add dependents to
+                a household after the member is in.
               </p>
             </li>
             <li class="step">
-              <h3>4. Keep everyone aligned</h3>
+              <h3>4. Publish classes, announcements, and documents</h3>
               <p>
-                Members get reminders and can review their own activity history,
-                while owners and coaches see who’s engaged.
+                Build the schedule with RSVPs and instructor assignment, post
+                announcements, and send waivers for e-sign.
+              </p>
+            </li>
+            <li class="step">
+              <h3>5. Run the week from the app</h3>
+              <p>
+                Staff use the inbox and class channels; members RSVP and get
+                push updates; owners review activity and billing.
               </p>
             </li>
           </ol>
@@ -188,27 +245,82 @@
 
       <section id="screenshots" class="section section--alt">
         <div class="container">
-          <h2>See it in action</h2>
+          <h2>See it in the app</h2>
           <p class="section-intro">
-            These are placeholders for real screenshots from the Elite Member
-            IQ app. Replace them once your production builds are ready.
+            Labeled previews of Elite Member IQ screens. Production screenshots
+            replace these when store builds are live — we do not publish test
+            harness captures.
           </p>
           <div class="grid grid--screenshots">
             <figure class="card screenshot-card">
-              <div class="screenshot-placeholder"></div>
-              <figcaption>Home dashboard</figcaption>
+              <div
+                class="screenshot-preview screenshot-preview--announcements"
+                aria-hidden="true"
+              >
+                <div class="screenshot-preview-chrome">Announcements</div>
+                <div class="screenshot-preview-rows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <figcaption>Announcements</figcaption>
             </figure>
             <figure class="card screenshot-card">
-              <div class="screenshot-placeholder"></div>
-              <figcaption>Bulletin board</figcaption>
+              <div
+                class="screenshot-preview screenshot-preview--schedule"
+                aria-hidden="true"
+              >
+                <div class="screenshot-preview-chrome">Schedule</div>
+                <div class="screenshot-preview-rows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <figcaption>Class schedule and RSVPs</figcaption>
             </figure>
             <figure class="card screenshot-card">
-              <div class="screenshot-placeholder"></div>
-              <figcaption>Schedule & upcoming classes</figcaption>
+              <div
+                class="screenshot-preview screenshot-preview--inbox"
+                aria-hidden="true"
+              >
+                <div class="screenshot-preview-chrome">Inbox</div>
+                <div class="screenshot-preview-rows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <figcaption>Staff inbox and class channels</figcaption>
             </figure>
             <figure class="card screenshot-card">
-              <div class="screenshot-placeholder"></div>
-              <figcaption>Member profile & activity history</figcaption>
+              <div
+                class="screenshot-preview screenshot-preview--documents"
+                aria-hidden="true"
+              >
+                <div class="screenshot-preview-chrome">Documents</div>
+                <div class="screenshot-preview-rows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <figcaption>Documents and e-sign</figcaption>
+            </figure>
+            <figure class="card screenshot-card">
+              <div
+                class="screenshot-preview screenshot-preview--billing"
+                aria-hidden="true"
+              >
+                <div class="screenshot-preview-chrome">Billing</div>
+                <div class="screenshot-preview-rows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <figcaption>Membership billing</figcaption>
             </figure>
           </div>
         </div>
@@ -218,29 +330,40 @@
         <div class="container">
           <h2>Privacy at a glance</h2>
           <p class="section-intro">
-            Elite Member IQ is built for trust. We keep your community’s data
-            secure and avoid collecting anything we don’t need to run the app.
+            Elite Member IQ is built for small gyms. We collect only what we
+            need to run the app. How Firebase, Stripe, and our hosting
+            providers handle data is in the Privacy Policy.
           </p>
           <div class="grid grid--privacy">
             <article class="card privacy-card">
               <h3>Firebase-backed</h3>
               <p>
-                We use Firebase services to authenticate users and store
-                community data securely in the cloud.
+                We use Firebase for authentication, community data, file
+                storage, push notifications, App Check, and Crashlytics for
+                reliability.
+              </p>
+            </article>
+            <article class="card privacy-card">
+              <h3>Payments via Stripe</h3>
+              <p>
+                When billing is enabled, memberships and gym payouts use Stripe.
+                We do not store full card numbers.
               </p>
             </article>
             <article class="card privacy-card">
               <h3>No data sales</h3>
               <p>
-                We do not sell your personal information. Data is only used to
-                provide and improve the Elite Member IQ app.
+                We do not sell your personal information or use targeted
+                advertising. Data is used to provide and improve Elite Member
+                IQ.
               </p>
             </article>
             <article class="card privacy-card">
-              <h3>Control from the app</h3>
+              <h3>Control in the app</h3>
               <p>
-                You can manage your account and request changes to your data
-                through the app, with a typical response time of 24 hours.
+                Update your profile, manage notifications, and message your gym
+                in-app. Privacy and deletion requests go to Banana Bandito LLC
+                by email.
               </p>
             </article>
           </div>
@@ -253,10 +376,11 @@
       <section class="section section--cta">
         <div class="container cta-container">
           <div>
-            <h2>Ready to keep your members in the loop?</h2>
+            <h2>Put members, classes, and billing in one app.</h2>
             <p>
-              Elite Member IQ helps small gyms and trainers run smooth,
-              professional communities without extra admin.
+              Elite Member IQ gives small gyms and studios a mobile hub for
+              onboarding, announcements, scheduling, staff messaging, waivers,
+              and membership billing.
             </p>
           </div>
           <div class="cta-actions">
@@ -300,31 +424,14 @@
           reserved.
         </p>
         <p class="footer-meta">
-          For support, open the Elite Member IQ app and use the in-app
-          help/support section.
+          For privacy or account requests, email
+          <a href="mailto:elitememberiq-support@bananabandito.com"
+            >elitememberiq-support@bananabandito.com</a
+          >. To reach your gym, use Chat in the Elite Member IQ app.
         </p>
       </div>
     </footer>
 
-    <script>
-      (function () {
-        const navToggle = document.querySelector(".nav-toggle");
-        const nav = document.querySelector(".site-nav");
-        const yearEl = document.getElementById("year");
-
-        if (navToggle && nav) {
-          navToggle.addEventListener("click", () => {
-            const expanded =
-              navToggle.getAttribute("aria-expanded") === "true";
-            navToggle.setAttribute("aria-expanded", String(!expanded));
-            nav.classList.toggle("site-nav--open", !expanded);
-          });
-        }
-
-        if (yearEl) {
-          yearEl.textContent = new Date().getFullYear().toString();
-        }
-      })();
-    </script>
+    <script src="/js/site.js" defer></script>
   </body>
 </html>
